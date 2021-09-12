@@ -7,7 +7,9 @@ on:
     types: [opened, synchronize, reopened]
 jobs:
   sonarcloud:
-    name: SonarCloud
+    name: SonarCloud Scan
+    uses: SonarSource/sonarcloud-github-action@v1.6
+
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
